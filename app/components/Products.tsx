@@ -1,5 +1,6 @@
 import Image from "next/image";
-import awnings_img from "@/public/window-awning.jpg";
+import Link from "next/link";
+import awnings_img from "@/public/retractable-awning.jpg";
 import wallpapers_img from "@/public/custom-wallpapers-1.jpg";
 import floorings_img from "@/public/laminated-wooden-flooring.jpg";
 import carpet_tiles_img from "@/public/carpet-tile-1.jpg";
@@ -10,20 +11,19 @@ import laser_cutting_img from "@/public/laser-cutting-and-3d-engraving-1.jpg";
 import artificial_turf_img from "@/public/artifficial-turf-1.jpg";
 import glass_films_img from "@/public/glass-film-1.jpg";
 import stretch_ceiling_img from "@/public/stretch-celing-1.jpg";
-import Link from "next/link";
 
 const productList = [
-  {
-    slug: "awnings",
-    img: awnings_img,
-    title: "Awnings",
-    desc: "Window, vertical, retractable & pergola awnings to shade your space in style",
-  },
   {
     slug: "wallpapers",
     img: wallpapers_img,
     title: "Imported & Customised Wallpapers",
     desc: "Curated imported and made-to-order wallpapers to redefine every wall",
+  },
+  {
+    slug: "awnings",
+    img: awnings_img,
+    title: "Awnings",
+    desc: "Window, vertical, retractable & pergola awnings to shade your space in style",
   },
   {
     slug: "floorings",
@@ -44,6 +44,12 @@ const productList = [
     desc: "Water-resistant, low-maintenance vinyl flooring with a natural wood finish",
   },
   {
+    slug: "laser-cutting",
+    img: laser_cutting_img,
+    title: "Laser Cutting & 3D Engraving",
+    desc: "Precision laser-cut and engraved panels for bespoke, intricate detailing",
+  },
+  {
     slug: "blinds",
     img: blinds_img,
     title: "Blinds (Manual & Motorised)",
@@ -54,18 +60,6 @@ const productList = [
     img: wall_panels_img,
     title: "Wall Panels",
     desc: "Statement wall and ceiling panels that bring texture and warmth to any room",
-  },
-  {
-    slug: "laser-cutting",
-    img: laser_cutting_img,
-    title: "Laser Cutting & 3D Engraving",
-    desc: "Precision laser-cut and engraved panels for bespoke, intricate detailing",
-  },
-  {
-    slug: "artificial-turf",
-    img: artificial_turf_img,
-    title: "Artificial Turf",
-    desc: "Evergreen, low-maintenance turf for lawns, terraces, and sports spaces",
   },
   {
     slug: "glass-films",
@@ -79,6 +73,12 @@ const productList = [
     title: "Stretch Ceiling",
     desc: "Custom-printed stretch ceilings that turn overhead space into a design feature",
   },
+  {
+    slug: "artificial-turf",
+    img: artificial_turf_img,
+    title: "Artificial Turf",
+    desc: "Evergreen, low-maintenance turf for lawns, terraces, and sports spaces",
+  },
 ];
 
 const Products = () => {
@@ -89,7 +89,10 @@ const Products = () => {
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
+          <h2
+            id="products-heading"
+            className="text-xl sm:text-2xl md:text-3xl font-medium"
+          >
             Our Home Decor Items
           </h2>
           <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
@@ -97,20 +100,19 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-x5 md:gap-y-8">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-x-5 md:gap-y-8">
           {productList.map((category) => (
             <Link
               key={category.slug}
               href={`/products/${category.slug}`}
-              className="group block"
+              className="group block break-inside-avoid mb-6 md:mb-8"
             >
-              <div className="relative w-full aspect-2/3 overflow-hidden rounded-xl">
+              <div className="relative w-full overflow-hidden rounded-xl">
                 <Image
                   src={category.img}
                   alt={`${category.title} — Jay Decor interior design solutions in Virar, Mumbai`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 10vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="pt-4 leading-6">
