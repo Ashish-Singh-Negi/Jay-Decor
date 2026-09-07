@@ -84,20 +84,16 @@ const productList = [
 const Products = () => {
   return (
     <section
-      id="products"
       aria-labelledby="products-heading"
       className="w-full bg-white py-14 md:py-24"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">
-          <h2
-            id="products-heading"
-            className="text-xl sm:text-2xl md:text-3xl font-medium"
-          >
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium">
             Our Home Decor Items
           </h2>
-          <p className="italic text-sm sm:text-base mt-2">
-            Design, Define and Transform
+          <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
+            Quality solutions for every corner of your space
           </p>
         </div>
 
@@ -108,7 +104,7 @@ const Products = () => {
               href={`/products/${category.slug}`}
               className="group block"
             >
-              <div className="relative w-full aspect-square overflow-hidden rounded-xl">
+              <div className="relative w-full aspect-2/3 overflow-hidden rounded-xl">
                 <Image
                   src={category.img}
                   alt={`${category.title} — Jay Decor interior design solutions in Virar, Mumbai`}

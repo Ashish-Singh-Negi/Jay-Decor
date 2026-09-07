@@ -75,15 +75,20 @@ const SharedByOurCustomers = () => {
   return (
     <section
       aria-labelledby="reviews-heading"
-      className="w-full py-14 mt-16 bg-primary/5 rounded-t-4xl"
+      className="w-full py-6 mt-16 bg-primary/5 rounded-t-4xl"
     >
       <div className="w-[90%] md:w-3/4 py-10 mx-auto">
-        <h2
-          id="reviews-heading"
-          className="text-xl sm:text-2xl md:text-3xl font-medium text-center mb-8"
-        >
-          Customer Reviews
-        </h2>
+        <div className="text-center">
+          <h2
+            id="products-heading"
+            className="text-xl sm:text-2xl md:text-3xl font-medium"
+          >
+            Customer reviews
+          </h2>
+          <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
+            In there own words
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
           {videos.map((src, i) => (

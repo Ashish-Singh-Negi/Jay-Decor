@@ -4,15 +4,11 @@ import jay_decor_founder_pic from "@/public/jay_decor_founder_pic.jpeg";
 const MeetOurFounders = () => {
   return (
     <section
-      id="founder"
       aria-labelledby="founder-heading"
-      className="w-full bg-white py-10 md:py-16"
+      className="w-full bg-primary/5 rounded-b-4xl py-10 md:py-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
-        <h2
-          id="founder-heading"
-          className="font-heading text-xl sm:text-2xl md:text-3xl font-medium text-center italic mb-8"
-        >
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-center mb-8">
           Meet Our <span className="text-primary not-italic">Founder</span>
         </h2>
 
@@ -28,27 +24,28 @@ const MeetOurFounders = () => {
           </div>
 
           <div className="leading-relaxed flex flex-col gap-3 sm:text-center md:text-left">
-            <h3 className="font-heading tracking-wide text-lg">
-              Yatish Arekar – Founder, JAY DECOR
+            <h3 className="tracking-wide text-xl font-medium mb-2">
+              Yatish Arekar – Founder,{" "}
+              <span className="text-primary"> JAY DECOR</span>
             </h3>
-            <p>
+            <p className="text-secondary">
               With over 20 years of industry experience, Yatish Arekar founded
               JAY DECOR with a simple vision — to make high-quality interior and
               exterior design solutions accessible, reliable, and innovative.
             </p>
-            <p className="tracking-wide">
+            <p className="text-secondary tracking-wide">
               Since 2007, his leadership and commitment to transparency,
               quality, and customer satisfaction have helped JAY DECOR build
               lasting relationships across residential, commercial, and
               hospitality projects.
             </p>
-            <p className="tracking-wider">
+            <p className="text-secondary tracking-wider">
               From wallpapers and flooring to blinds, wall panels, awnings,
               artificial turf, glass films, laser cutting, 3D engraving, and
               stretch ceilings, JAY DECOR continues to transform spaces through
               experience, creativity, and attention to detail.
             </p>
-            <p className="tracking-wide font-medium">
+            <p className="text-secondary tracking-wide font-medium">
               20+ Years of Legacy. One Vision — Exceptional Spaces.
             </p>
           </div>
