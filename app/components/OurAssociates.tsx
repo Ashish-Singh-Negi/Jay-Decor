@@ -38,10 +38,12 @@ const brandLists = [
 
 const OurAssociates = () => {
   return (
-    <div className="w-full pb-8 my-6">
+    <div className="w-full py-10">
       <section className="h-full w-full md:w-3/4 mx-auto pt-10">
-        <h1 className="text-2xl font-medium text-center">Our Associates</h1>
-        <div className="my-14">
+        <h1 className="text-xl md:text-2xl font-medium text-center">
+          Our Associates
+        </h1>
+        <div className="my-12">
           <Marquee className="h-fit w-full">
             {brandLists.map((brand, i) => {
               return (

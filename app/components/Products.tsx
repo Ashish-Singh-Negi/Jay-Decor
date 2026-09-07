@@ -86,7 +86,7 @@ const Products = () => {
     <section
       id="products"
       aria-labelledby="products-heading"
-      className="w-full bg-white py-10 md:py-16"
+      className="w-full bg-white py-14 md:py-24"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">
@@ -113,15 +113,13 @@ const Products = () => {
                   src={category.img}
                   alt={`${category.title} — Jay Decor interior design solutions in Virar, Mumbai`}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 10vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="pt-4 leading-6">
-                <h3 className="text-lg sm:text-xl font-normal">
-                  {category.title}
-                </h3>
-                <p className="text-sm sm:text-base italic text-gray-600">
+                <h3 className="text-lg tracking-wide">{category.title}</h3>
+                <p className="text-sm text-gray-600 tracking-wide">
                   {category.desc}
                 </p>
               </div>

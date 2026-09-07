@@ -1,15 +1,15 @@
 const Quotes = () => {
   return (
-    <section aria-label="Quotes" className="w-full bg-[#F6D425]/5 py-12">
+    <section aria-label="Quotes" className="w-full py-14 md:py-24">
       <div className="w-[90%] md:w-3/4 lg:w-1/2 mx-auto text-center">
         <span
           aria-hidden="true"
-          className="text-[#F6D425] text-4xl md:text-6xl font-serif leading-none"
+          className="text-primary text-4xl md:text-6xl font-serif leading-none"
         >
           &ldquo;
         </span>
 
-        <blockquote className="">
+        <blockquote className="text-secondary">
           <p className="text-base sm:text-lg md:text-2xl italic leading-relaxed">
             If people like you, they will listen to you.
           </p>

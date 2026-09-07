@@ -18,7 +18,7 @@ export default function Home() {
       <About />
       <OurAssociates />
       {/* <OurVisionMission /> */}
-      {/* <MeetOurFounders /> */}
+      <MeetOurFounders />
       <Quotes />
       <SharedByOurCustomers />
       <Footer />

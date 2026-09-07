@@ -54,7 +54,7 @@ const VideoCard = ({ src, index }: { src: string; index: number }) => {
 
       {!playing && (
         <span className="absolute inset-0 flex items-center justify-center bg-black/30">
-          <span className="w-14 h-14 rounded-full bg-[#F6D425]/30 flex items-center justify-center text-2xl">
+          <span className="w-14 h-14 rounded-full bg-primary/30 flex items-center justify-center text-2xl">
             <CgPlayButton size={60} className="text-white" />
           </span>
         </span>
@@ -73,8 +73,11 @@ const VideoCard = ({ src, index }: { src: string; index: number }) => {
 
 const SharedByOurCustomers = () => {
   return (
-    <section aria-labelledby="reviews-heading" className="w-full">
-      <div className="w-[90%] md:w-3/4 py-10 md:py-16 mx-auto">
+    <section
+      aria-labelledby="reviews-heading"
+      className="w-full py-14 mt-16 bg-primary/5 rounded-t-4xl"
+    >
+      <div className="w-[90%] md:w-3/4 py-10 mx-auto">
         <h2
           id="reviews-heading"
           className="text-xl sm:text-2xl md:text-3xl font-medium text-center mb-8"

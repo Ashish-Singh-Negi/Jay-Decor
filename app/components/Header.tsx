@@ -8,15 +8,86 @@ import jay_decor_logo from "@/public/Jay-decor-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
-  { label: "Products", href: "/#products" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  {
+    label: "products",
+    href: "/products",
+    categories: [
+      {
+        label: "Wallpapers",
+        href: "/products/wallpapers",
+      },
+      {
+        label: "Floorings",
+        href: "/products/floorings",
+        categories: [
+          { label: "Laminated Wooden", href: "/products/floorings" },
+          { label: "Engineered", href: "/products/floorings" },
+          { label: "Solid Wood", href: "/products/floorings" },
+          { label: "Deck", href: "/products/floorings" },
+          { label: "SPC", href: "/products/floorings" },
+        ],
+      },
+      {
+        label: "Blinds",
+        href: "/products/blinds",
+        categories: [
+          { label: "Roller", href: "/products/blinds" },
+          { label: "Zebra", href: "/products/blinds" },
+          { label: "Honeycomb", href: "/products/blinds" },
+          { label: "Wooden Venetain", href: "/products/blinds" },
+          { label: "Bamboo Chick", href: "/products/blinds" },
+          { label: "Duette", href: "/products/blinds" },
+          { label: "Motorized Curtain Tracks", href: "/products/blinds" },
+        ],
+      },
+      {
+        label: "Awnings",
+        href: "/products/awnings",
+        categories: [
+          { label: "Window Awanings", href: "/products/awnings" },
+          { label: "Vertical Awanings", href: "/products/awnings" },
+          { label: "Retractable Awanings", href: "/products/awnings" },
+          { label: "Retractable Pergola", href: "/products/awnings" },
+          { label: "Garden Umbrellas", href: "/products/awnings" },
+        ],
+      },
+      {
+        label: "Carpet tiles",
+        href: "/products/capet-tiles",
+      },
+      {
+        label: "Vinyl Floorings",
+        href: "/products/vinyl-floorings",
+      },
+      {
+        label: "Wall panels",
+        href: "/products/wall-panels",
+      },
+      {
+        label: "Laser cutting",
+        href: "/products/laser-cuttings",
+      },
+      {
+        label: "Artifical turf",
+        href: "/products/artifical-turfs",
+      },
+      {
+        label: "Glass firms",
+        href: "/products/glass-films",
+      },
+      {
+        label: "Stretch Ceiling",
+        href: "/products/stretch-ceilings",
+      },
+    ],
+  },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent background scroll while the drawer is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
@@ -35,10 +106,10 @@ const Header = () => {
         />
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex px-10 items-center gap-10">
+        <nav className="hidden lg:flex lg:w-full px-10 justify-end items-center gap-10">
           {navLinks.map((link) => (
             <Link
-              className="hover:text-yellow-600"
+              className="hover:text-primary-hover"
               key={link.label}
               href={link.href}
             >
@@ -59,7 +130,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Overlay — covers remaining 10%, click to close */}
+      {/* Overlay */}
       <div
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
@@ -70,7 +141,7 @@ const Header = () => {
         }`}
       />
 
-      {/* Left drawer — 90% width */}
+      {/* Left drawer */}
       <nav
         aria-label="Mobile navigation"
         className={`fixed top-0 left-0 h-full w-[90%] max-w-xs bg-white shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${

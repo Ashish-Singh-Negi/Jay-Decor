@@ -25,12 +25,10 @@ const Footer = () => {
 
   return (
     <footer
-      id="contact"
       aria-label="Site footer"
-      className="w-full bg-[#F6D425]/10 pt-10 md:pt-16"
+      className="w-full bg-primary/15 pt-10 md:pt-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14">
-        {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <Image
             src={jay_decor_logo}
@@ -38,12 +36,12 @@ const Footer = () => {
             height={48}
             className="h-10 w-auto md:h-12"
           />
-          <p className="text-sm mt-4 leading-relaxed pr-0 md:pr-10">
+          <p className="text-sm mt-4 leading-relaxed pr-0 md:pr-10 text-secondary/75">
             One-stop solution for interior and exterior design — Residential,
             Commercial & Hospitality projects since 2007.
           </p>
 
-          <div className="grid grid-cols-1">
+          <div className="grid grid-cols-1 text-secondary/75">
             <a
               href="https://www.instagram.com/jaydecorindia/"
               target="_blank"
@@ -68,12 +66,14 @@ const Footer = () => {
         </div>
 
         <nav aria-label="Our products">
-          <h2 className="text-base font-medium mb-3">Our Products</h2>
-          <div className="grid grid-cols-2 gap-x-4 text-sm">
+          <h2 className="text-secondary text-base font-semibold mb-3">
+            Our Products
+          </h2>
+          <div className="grid grid-cols-2 gap-x-4 text-sm text-secondary/75 italic">
             <ul className="space-y-2">
               {productCol1.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="hover:text-yellow-600">
+                  <Link href={link.href} className="hover:text-primary-hover">
                     {link.label}
                   </Link>
                 </li>
@@ -82,7 +82,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {productCol2.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="hover:text-yellow-600">
+                  <Link href={link.href} className="hover:text-primary-hover">
                     {link.label}
                   </Link>
                 </li>
@@ -92,20 +92,22 @@ const Footer = () => {
         </nav>
 
         <address className="not-italic text-sm leading-relaxed">
-          <h2 className="text-base font-medium mb-3">Contact Us</h2>
-          <p>
+          <h2 className="text-secondary text-base font-semibold mb-3">
+            Contact Us
+          </h2>
+          <p className="text-secondary/75">
             Shop No.4, Shreeram Complex,
             <br />
             Next To HDFC Home Loans,
             <br />
             Tirupati Nagar Phase 1, Virar (W)
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-secondary/75">
             <a href="tel:+919029070700" className="hover:underline">
               +91 90290 70700
             </a>
           </p>
-          <p>
+          <p className="text-secondary/75">
             <a href="mailto:jaydecor@gmail.com" className="hover:underline">
               jaydecor@gmail.com
             </a>
@@ -113,7 +115,7 @@ const Footer = () => {
         </address>
       </div>
 
-      <div className="border-t border-black/10 mt-10 py-4">
+      <div className="border-t border-secondary/30 text-secondary mt-10 py-4">
         <p className="text-center font-medium text-xs sm:text-sm">
           © {currentYear} Jay Decor. All rights reserved.
         </p>
