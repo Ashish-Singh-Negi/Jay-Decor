@@ -17,7 +17,7 @@ const Hero = () => {
         className="object-cover"
       />
 
-      {/* Overlay for text contrast */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">

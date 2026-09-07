@@ -2,8 +2,13 @@
 
 import { useRef, useState } from "react";
 import { CgPlayButton } from "react-icons/cg";
-import { GiMute } from "react-icons/gi";
 import { GoMute, GoUnmute } from "react-icons/go";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const videos = [
   "/videos/customer-review-1.mp4",
@@ -80,19 +85,31 @@ const SharedByOurCustomers = () => {
       <div className="w-[90%] md:w-3/4 py-10 mx-auto">
         <div className="text-center">
           <h2
-            id="products-heading"
+            id="reviews-heading"
             className="text-xl sm:text-2xl md:text-3xl font-medium"
           >
-            Customer reviews
+            Customer Reviews
           </h2>
           <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
-            In there own words
+            In their own words
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
+        <div className="lg:hidden py-10">
+          <Carousel opts={{ align: "center", loop: false }}>
+            <CarouselContent className="px-4">
+              {videos.map((src, i) => (
+                <CarouselItem key={src} className="basis-[80%] sm:basis-1/2">
+                  <VideoCard src={src} index={i} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <div className="hidden lg:grid lg:grid-cols-4 gap-6 py-10">
           {videos.map((src, i) => (
-            <VideoCard key={src} src={src} index={i} />
+            <VideoCard key={`grid-${src}`} src={src} index={i} />
           ))}
         </div>
       </div>

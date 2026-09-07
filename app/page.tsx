@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import MeetOurFounders from "./components/MeetOurFounders";
 import OurAssociates from "./components/OurAssociates";
-import OurVisionMission from "./components/OurVisionMission";
 import SharedByOurCustomers from "./components/SharedByOurCustomers";
 import Quotes from "./components/Quotes";
 

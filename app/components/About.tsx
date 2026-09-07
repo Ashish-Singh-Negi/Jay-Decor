@@ -6,7 +6,10 @@ const About = () => {
         className="w-[90%] rounded-r-full md:rounded-full bg-primary/5 md:w-3/4 py-10 md:py-16 mx-auto"
       >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-medium md:text-center italic mb-8">
-          About <span className="font-heading text-primary">Jay Decor</span>
+          About{" "}
+          <span className="font-heading font-semibold text-primary">
+            Jay Decor
+          </span>
         </h2>
 
         <p className="text-secondary text-sm sm:text-base mt-4 md:text-center max-w-2xl mx-auto">
