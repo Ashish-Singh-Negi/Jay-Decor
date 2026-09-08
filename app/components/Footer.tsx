@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer
       aria-label="Site footer"
-      className="w-full bg-primary/80 pt-10 md:pt-16"
+      className="w-full bg-primary/75 pt-10 md:pt-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14">
         <div className="sm:col-span-2 lg:col-span-1">
@@ -36,12 +36,12 @@ const Footer = () => {
             height={60}
             className="h-12 w-auto md:h-20 bg-white px-2 py-2 rounded-2xl"
           />
-          <p className="text-sm mt-4 leading-relaxed pr-0 md:pr-10 text-secondary/80">
+          <p className="text-sm mt-4 leading-relaxed pr-0 md:pr-10 text-secondary/75">
             One-stop solution for interior and exterior design — Residential,
             Commercial & Hospitality projects since 2007.
           </p>
 
-          <div className="grid grid-cols-1 text-secondary/80">
+          <div className="grid grid-cols-1 text-secondary/75">
             <a
               href="https://www.instagram.com/jaydecorindia/"
               target="_blank"
@@ -67,9 +67,9 @@ const Footer = () => {
 
         <nav aria-label="Our products">
           <h2 className="text-secondary text-base font-semibold mb-3">
-            Our Products
+            Our Services
           </h2>
-          <div className="grid grid-cols-2 gap-x-4 text-sm text-secondary/80 italic">
+          <div className="grid grid-cols-2 gap-x-4 text-sm text-secondary/75 italic">
             <ul className="space-y-2">
               {productCol1.map((link) => (
                 <li key={link.label}>
@@ -95,19 +95,19 @@ const Footer = () => {
           <h2 className="text-secondary text-base font-semibold mb-3">
             Contact Us
           </h2>
-          <p className="text-secondary/80">
+          <p className="text-secondary/75">
             Shop No.4, Shreeram Complex,
             <br />
             Next To HDFC Home Loans,
             <br />
             Tirupati Nagar Phase 1, Virar (W)
           </p>
-          <p className="mt-3 text-secondary/80">
+          <p className="mt-3 text-secondary/75">
             <a href="tel:+919029070700" className="hover:underline">
               +91 90290 70700
             </a>
           </p>
-          <p className="text-secondary/80">
+          <p className="text-secondary/75">
             <a href="mailto:jaydecor@gmail.com" className="hover:underline">
               jaydecor@gmail.com
             </a>

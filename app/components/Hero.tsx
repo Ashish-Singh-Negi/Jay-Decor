@@ -1,15 +1,15 @@
 import Image from "next/image";
-import primary_banner from "@/public/primary-banner.jpg";
+import hero_banner from "@/public/primary-banner.jpg";
 import Link from "next/link";
 
 const Hero = () => {
   return (
     <section
       aria-label="Jay Decor — interior and exterior design"
-      className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen"
+      className="relative w-full h-[80vh]"
     >
       <Image
-        src={primary_banner}
+        src={hero_banner}
         alt="Modern outdoor living space with pergola, seating, and pool designed by Jay Decor"
         fill
         priority

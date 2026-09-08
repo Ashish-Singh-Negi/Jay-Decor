@@ -3,82 +3,60 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import jay_decor_logo from "@/public/Jay-decor-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
-    label: "products",
-    href: "/products",
+    label: "Services",
+    href: "/services",
     categories: [
       {
         label: "Wallpapers",
-        href: "/products/wallpapers",
+        href: "/services/wallpapers",
       },
       {
         label: "Floorings",
-        href: "/products/floorings",
-        categories: [
-          { label: "Laminated Wooden", href: "/products/floorings" },
-          { label: "Engineered", href: "/products/floorings" },
-          { label: "Solid Wood", href: "/products/floorings" },
-          { label: "Deck", href: "/products/floorings" },
-          { label: "SPC", href: "/products/floorings" },
-        ],
+        href: "/services/floorings",
       },
       {
         label: "Blinds",
-        href: "/products/blinds",
-        categories: [
-          { label: "Roller", href: "/products/blinds" },
-          { label: "Zebra", href: "/products/blinds" },
-          { label: "Honeycomb", href: "/products/blinds" },
-          { label: "Wooden Venetain", href: "/products/blinds" },
-          { label: "Bamboo Chick", href: "/products/blinds" },
-          { label: "Duette", href: "/products/blinds" },
-          { label: "Motorized Curtain Tracks", href: "/products/blinds" },
-        ],
+        href: "/services/blinds",
       },
       {
         label: "Awnings",
-        href: "/products/awnings",
-        categories: [
-          { label: "Window Awanings", href: "/products/awnings" },
-          { label: "Vertical Awanings", href: "/products/awnings" },
-          { label: "Retractable Awanings", href: "/products/awnings" },
-          { label: "Retractable Pergola", href: "/products/awnings" },
-          { label: "Garden Umbrellas", href: "/products/awnings" },
-        ],
+        href: "/services/awnings",
       },
       {
         label: "Carpet tiles",
-        href: "/products/capet-tiles",
+        href: "/services/capet-tiles",
       },
       {
         label: "Vinyl Floorings",
-        href: "/products/vinyl-floorings",
+        href: "/services/vinyl-floorings",
       },
       {
         label: "Wall panels",
-        href: "/products/wall-panels",
+        href: "/services/wall-panels",
       },
       {
         label: "Laser cutting",
-        href: "/products/laser-cuttings",
+        href: "/services/laser-cuttings",
       },
       {
         label: "Artifical turf",
-        href: "/products/artifical-turfs",
+        href: "/services/artifical-turfs",
       },
       {
         label: "Glass firms",
-        href: "/products/glass-films",
+        href: "/services/glass-films",
       },
       {
         label: "Stretch Ceiling",
-        href: "/products/stretch-ceilings",
+        href: "/services/stretch-ceilings",
       },
     ],
   },
@@ -87,6 +65,8 @@ const navLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -106,17 +86,88 @@ const Header = () => {
         />
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex lg:w-full px-10 justify-end items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              className="hover:text-primary-hover"
-              key={link.label}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden lg:flex flex-1 justify-center items-center gap-10">
+          {navLinks.map((link) =>
+            link.categories ? (
+              <div
+                key={link.label}
+                className="relative"
+                onMouseEnter={() => setDesktopDropdownOpen(true)}
+                onMouseLeave={() => setDesktopDropdownOpen(false)}
+              >
+                <p className="flex items-center cursor-pointer gap-1 hover:text-primary-hover">
+                  {link.label}
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform duration-200 ${
+                      desktopDropdownOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </p>
+
+                {/* Dropdown */}
+                <div
+                  className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${
+                    desktopDropdownOpen
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-2"
+                  }`}
+                >
+                  <div className="bg-white shadow-xl rounded-lg py-3 w-64 max-h-[70vh] overflow-y-auto">
+                    {link.categories.map((cat) => (
+                      <Link
+                        key={cat.label}
+                        href={cat.href}
+                        className="block px-5 py-2.5 text-sm hover:bg-gray-50 hover:text-primary-hover"
+                      >
+                        {cat.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                className="hover:text-primary-hover"
+                key={link.label}
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
+
+        {/* Social icons - desktop only */}
+        <div className="hidden lg:flex items-center gap-4 text-xl">
+          <a
+            href="https://wa.me/919029070700"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="hover:text-primary-hover"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://instagram.com/jaydecor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hover:text-primary-hover"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://facebook.com/jaydecor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="hover:text-primary-hover"
+          >
+            <FaFacebook />
+          </a>
+        </div>
 
         {/* Right side: mobile toggle */}
         <div className="flex items-center gap-4">
@@ -144,7 +195,7 @@ const Header = () => {
       {/* Left drawer */}
       <nav
         aria-label="Mobile navigation"
-        className={`fixed top-0 left-0 h-full w-[90%] max-w-xs bg-white shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-[90%] max-w-xs bg-white shadow-xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -160,17 +211,57 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="flex flex-col gap-2 px-6 py-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="py-3 text-lg border-b border-gray-100 hover:text-yellow-600"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="flex flex-col gap-1 px-6 py-4">
+          {navLinks.map((link) =>
+            link.categories ? (
+              <div key={link.label} className="border-b border-gray-100">
+                <button
+                  onClick={() =>
+                    setMobileExpanded(
+                      mobileExpanded === link.label ? null : link.label,
+                    )
+                  }
+                  className="w-full flex items-center justify-between py-3 text-lg"
+                >
+                  {link.label}
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform duration-200 ${
+                      mobileExpanded === link.label ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-200 ${
+                    mobileExpanded === link.label
+                      ? "max-h-[1000px] pb-2"
+                      : "max-h-0"
+                  }`}
+                >
+                  {link.categories.map((cat) => (
+                    <Link
+                      key={cat.label}
+                      href={cat.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block pl-3 py-2 text-sm text-gray-700"
+                    >
+                      {cat.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="py-3 text-lg border-b border-gray-100 hover:text-yellow-600"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
         </div>
       </nav>
     </header>

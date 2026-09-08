@@ -40,7 +40,7 @@ const OurAssociates = () => {
   return (
     <div className="w-full py-10">
       <section className="h-full w-full md:w-3/4 mx-auto pt-10">
-        <h1 className="text-xl md:text-2xl font-medium text-center">
+        <h1 className="font-heading text-xl sm:text-2xl md:text-3xl font-medium text-center">
           Our Associates
         </h1>
         <div className="my-12">

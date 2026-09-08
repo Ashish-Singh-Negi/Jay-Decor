@@ -91,12 +91,12 @@ const Products = () => {
         <div className="text-center mb-10">
           <h2
             id="products-heading"
-            className="text-xl sm:text-2xl md:text-3xl font-medium"
+            className=" tracking-wide text-xl sm:text-2xl md:text-3xl font-medium font-heading"
           >
-            Our Home Decor Items
+            Our Services
           </h2>
-          <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
-            Quality solutions for every corner of your space
+          <p className="tracking-wide font-heading text-secondary/70 italic text-sm sm:text-base mt-2">
+            From walls and floors to ceilings and outdoor spaces
           </p>
         </div>
 

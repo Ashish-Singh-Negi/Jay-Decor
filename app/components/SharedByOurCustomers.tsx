@@ -80,17 +80,17 @@ const SharedByOurCustomers = () => {
   return (
     <section
       aria-labelledby="reviews-heading"
-      className="w-full py-6 mt-10 bg-primary/20 rounded-t-4xl"
+      className="w-full py-6 mt-10 bg-[#F6F6F6] rounded-t-4xl"
     >
       <div className="w-[90%] md:w-3/4 py-6 mx-auto">
         <div className="text-center">
           <h2
             id="reviews-heading"
-            className="text-xl sm:text-2xl md:text-3xl font-medium"
+            className="font-heading tracking-wide text-xl sm:text-2xl md:text-3xl font-medium"
           >
             Customer Reviews
           </h2>
-          <p className="text-secondary/70 italic text-sm sm:text-base mt-2">
+          <p className="font-heading tracking-wide text-secondary/70 italic text-sm sm:text-base mt-2">
             In their own words
           </p>
         </div>

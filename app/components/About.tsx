@@ -1,36 +1,32 @@
 const About = () => {
   return (
-    <div className="w-full rounded-md md:rounded-r-full py-16 bg-primary/25">
+    <div className="w-full bg-[#F6F6F6] rounded-md md:rounded-r-full">
       <section
         aria-labelledby="about"
-        className="w-full rounded-md md:rounded-r-full md:rounded-full bg-primary/25 md:w-3/4 py-10 md:py-16 px-[10%] md:mx-auto"
+        className="w-full rounded-md md:rounded-r-full md:rounded-full md:w-3/4 py-10 md:py-16 px-[10%] md:mx-auto"
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-center italic mb-8">
-          About{" "}
-          <span className="bg-white px-4 py-1 rounded-4xl font-heading font-semibold text-primary ml-1">
-            Jay Decor
-          </span>
-        </h2>
+        <div className="text-center mb-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold font-heading">
+            About <span className="text-primary">JAY DECOR</span>
+          </h2>
+          <p className="font-heading text-secondary/70 italic text-sm sm:text-base mt-2">
+            20+ Years of Transforming Spaces
+          </p>
+        </div>
 
         <p className="text-secondary tracking-wide text-sm sm:text-base mt-4 md:text-center max-w-2xl mx-auto">
-          Welcome to JAY DECOR, your ultimate one-stop solution for interior and
-          exterior design needs.
+          Since 2005, JAY DECOR has been helping people and businesses create
+          spaces that are not just beautiful, but thoughtfully designed,
+          functional and built to last.
         </p>
         <p className="text-secondary tracking-wide font-normal text-sm sm:text-base leading-relaxed my-4 md:text-center max-w-3xl mx-auto">
-          <span className="bg-white rounded-2xl tracking-wide py-0.5 px-2">
-            Established in 2007
-          </span>{" "}
-          our experienced team, top-quality materials, and innovative approach
-          ensure we exceed client expectations. Committed to transparency and
-          customer satisfaction,{" "}
-          <span className="bg-white px-2 py-0.5 tracking-wide rounded-l-2xl text-primary font-semibold">
-            JAY DECOR
-          </span>{" "}
-          <span className="bg-white px-2 py-0.5 tracking-wide rounded-r-2xl">
-            specializes in a wide range of interior design products
-          </span>{" "}
-          for Residential, Commercial, and Hospitality projects. We bring
-          creativity and expertise to every project.
+          Founded with a vision to bring quality, creativity and reliability
+          together under one roof, JAY DECOR has grown into a trusted name for
+          premium interior and exterior design solutions. From imported and
+          customised wallpapers, flooring and blinds to awnings, wall panels,
+          artificial turf, glass films, stretch ceilings, laser cutting and 3D
+          engraving, we offer a comprehensive range of solutions for modern
+          spaces.
         </p>
       </section>
     </div>
