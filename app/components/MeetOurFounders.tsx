@@ -6,7 +6,7 @@ const MeetOurFounders = () => {
   return (
     <section
       aria-labelledby="founder-heading"
-      className="w-full bg-primary-hover/70 rounded-b-4xl py-10 md:py-16"
+      className="w-full bg-primary/50 rounded-b-4xl py-10 md:py-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-center mb-8">
@@ -27,7 +27,7 @@ const MeetOurFounders = () => {
           </div>
 
           <div className="leading-relaxed flex flex-col gap-3 sm:text-center md:text-left">
-            <h3 className="w-fit tracking-wide text-xl font-medium mb-2 bg-white px-4 py-2 rounded-r-2xl">
+            <h3 className="w-fit tracking-wide  md:text-xl font-medium mb-2 bg-white px-4 py-2 rounded-r-2xl">
               Yatish Arekar – Founder,{" "}
               <span className="text-primary font-semibold">JAY DECOR</span>
             </h3>

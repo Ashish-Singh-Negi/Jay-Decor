@@ -1,11 +1,11 @@
 const About = () => {
   return (
-    <div className="w-full rounded-r-full py-16 bg-primary/25">
+    <div className="w-full rounded-md md:rounded-r-full py-16 bg-primary/25">
       <section
         aria-labelledby="about"
-        className="w-[90%] rounded-r-full md:rounded-full bg-primary/25 md:w-3/4 py-10 md:py-16 mx-auto"
+        className="w-full rounded-md md:rounded-r-full md:rounded-full bg-primary/25 md:w-3/4 py-10 md:py-16 px-[10%] md:mx-auto"
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium md:text-center italic mb-8">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-center italic mb-8">
           About{" "}
           <span className="bg-white px-4 py-1 rounded-4xl font-heading font-semibold text-primary ml-1">
             Jay Decor

@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer
       aria-label="Site footer"
-      className="w-full bg-primary pt-10 md:pt-16"
+      className="w-full bg-primary/80 pt-10 md:pt-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14">
         <div className="sm:col-span-2 lg:col-span-1">

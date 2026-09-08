@@ -4,12 +4,12 @@ const Quotes = () => {
       <div className="w-[90%] md:w-3/4 lg:w-1/2 mx-auto text-center">
         <span
           aria-hidden="true"
-          className="text-primary text-4xl md:text-6xl font-serif leading-none"
+          className="text-primary text-4xl md:text-6xl font-heading leading-none"
         >
           &ldquo;
         </span>
 
-        <blockquote className="text-secondary">
+        <blockquote className="text-secondary font-heading tracking-wide">
           <p className="text-base sm:text-lg md:text-2xl italic leading-relaxed">
             If people like you, they will listen to you.
           </p>
@@ -18,7 +18,7 @@ const Quotes = () => {
             If people trust you, they will do business with you.
           </p>
           <footer className="mt-4">
-            <cite className="text-sm sm:text-base font-medium">
+            <cite className="font-body text-sm sm:text-base font-medium">
               — Zig Ziglar
             </cite>
           </footer>
