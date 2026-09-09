@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       aria-label="Jay Decor — interior and exterior design"
-      className="relative w-full h-[80vh]"
+      className="relative h-[70vh] w-full"
     >
       <Image
         src={hero_banner}
@@ -21,11 +21,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
-        <h1 className="font-heading text-white text-2xl sm:text-4xl md:text-5xl font-medium max-w-3xl">
+        <h1 className="font-heading text-white text-2xl sm:text-4xl md:text-5xl font-medium max-w-4xl">
           Elevate Your Space with{" "}
-          <span className="text-primary">Jay Decor</span>
+          <span className="text-primary">JAY DECOR</span>
         </h1>
-        <p className="text-white/60 text-sm sm:text-base md:text-lg italic mt-4 max-w-xl">
+        <p className="font-heading text-white/60 text-sm sm:text-base md:text-lg italic mt-4 max-w-xl">
           Interior & exterior design solutions for Residential, Commercial &
           Hospitality projects
         </p>

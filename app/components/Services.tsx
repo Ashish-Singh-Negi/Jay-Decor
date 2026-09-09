@@ -85,7 +85,7 @@ const Services = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="w-full bg-white py-14 md:py-24"
+      className="w-full bg-white py-14 md:py-20"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">

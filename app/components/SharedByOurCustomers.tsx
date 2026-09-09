@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { CgPlayButton } from "react-icons/cg";
 import { GoMute, GoUnmute } from "react-icons/go";
 
 import {
@@ -9,12 +8,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { FaPlay } from "react-icons/fa";
 
 const videos = [
-  "/videos/customer-review-1.mp4",
-  "/videos/customer-review-2.mp4",
   "/videos/customer-review-3.mp4",
   "/videos/customer-review-4.mp4",
+  "/videos/customer-review-2.mp4",
+  "/videos/customer-review-1.mp4",
 ];
 
 const VideoCard = ({ src, index }: { src: string; index: number }) => {
@@ -44,7 +44,7 @@ const VideoCard = ({ src, index }: { src: string; index: number }) => {
   return (
     <div
       onClick={togglePlay}
-      className="relative w-full aspect-9/16 rounded-xl overflow-hidden bg-black cursor-pointer"
+      className="group relative w-full aspect-auto rounded-lg overflow-hidden bg-black cursor-pointer"
     >
       <video
         ref={videoRef}
@@ -54,13 +54,13 @@ const VideoCard = ({ src, index }: { src: string; index: number }) => {
         playsInline
         preload="metadata"
         aria-label={`Customer review video ${index + 1}`}
-        className="w-full h-full object-cover"
+        className="h-full w-full aspect-3/4.5 object-cover"
       />
 
       {!playing && (
-        <span className="absolute inset-0 flex items-center justify-center bg-black/30">
-          <span className="w-14 h-14 rounded-full bg-primary/30 flex items-center justify-center text-2xl">
-            <CgPlayButton size={60} className="text-white" />
+        <span className="hidden group-hover:flex absolute inset-0 items-center justify-center bg-black/10">
+          <span className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center text-2xl">
+            <FaPlay size={24} className="text-primary" />
           </span>
         </span>
       )}
@@ -68,7 +68,7 @@ const VideoCard = ({ src, index }: { src: string; index: number }) => {
       <button
         onClick={toggleMute}
         aria-label={muted ? "Unmute video" : "Mute video"}
-        className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center text-white text-sm"
+        className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/50 hidden group-hover:flex items-center justify-center text-white text-sm cursor-pointer"
       >
         {muted ? <GoMute /> : <GoUnmute />}
       </button>
@@ -95,7 +95,7 @@ const SharedByOurCustomers = () => {
           </p>
         </div>
 
-        <div className="lg:hidden py-10">
+        <div className="sm:hidden py-10">
           <Carousel opts={{ align: "center", loop: false }}>
             <CarouselContent className="px-4">
               {videos.map((src, i) => (
@@ -107,7 +107,7 @@ const SharedByOurCustomers = () => {
           </Carousel>
         </div>
 
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6 py-10">
+        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-6 py-10">
           {videos.map((src, i) => (
             <VideoCard key={`grid-${src}`} src={src} index={i} />
           ))}

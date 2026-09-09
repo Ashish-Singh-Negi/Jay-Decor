@@ -44,12 +44,12 @@ const OurAssociates = () => {
           Our Associates
         </h1>
         <div className="my-12">
-          <Marquee className="h-fit w-full">
+          <Marquee className="h-fit w-full grayscale">
             {brandLists.map((brand, i) => {
               return (
                 <Image
                   className="px-4"
-                  height={120}
+                  height={86}
                   key={brand.name + i}
                   src={brand.img}
                   alt={brand.name}

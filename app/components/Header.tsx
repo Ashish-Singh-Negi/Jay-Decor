@@ -107,7 +107,7 @@ const Header = () => {
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${
+                  className={`absolute top-full pt-4 transition-all duration-200 ${
                     desktopDropdownOpen
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible -translate-y-2"
@@ -234,9 +234,7 @@ const Header = () => {
 
                 <div
                   className={`overflow-hidden transition-all duration-200 ${
-                    mobileExpanded === link.label
-                      ? "max-h-[1000px] pb-2"
-                      : "max-h-0"
+                    mobileExpanded === link.label ? "max-h-250 pb-2" : "max-h-0"
                   }`}
                 >
                   {link.categories.map((cat) => (
