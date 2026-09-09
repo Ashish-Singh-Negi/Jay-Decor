@@ -6,7 +6,7 @@ const MeetOurFounders = () => {
   return (
     <section
       aria-labelledby="founder-heading"
-      className="w-full bg-[#F6F6F6] rounded-b-4xl md:py-16"
+      className="w-full bg-[#F6F6F6] rounded-b-4xl py-10 md:py-16"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-8">
