@@ -33,7 +33,7 @@ const Hero = () => {
           href="/products"
           className="mt-8 inline-block bg-primary font-primary px-6 py-3 rounded-full text-sm sm:text-base hover:bg-primary-hover transition"
         >
-          Explore Our Products
+          Explore Our Services
         </Link>
       </div>
     </section>
