@@ -89,10 +89,7 @@ const Services = () => {
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">
-          <h2
-            id="services-heading"
-            className=" tracking-wide text-xl sm:text-2xl md:text-3xl font-medium font-heading"
-          >
+          <h2 className="tracking-wide text-xl sm:text-2xl md:text-3xl font-medium font-heading">
             Our Services
           </h2>
           <p className="tracking-wide font-heading text-secondary/70 italic text-sm sm:text-base mt-2">
@@ -117,7 +114,7 @@ const Services = () => {
               </div>
               <div className="pt-4 leading-6">
                 <h3 className="text-lg tracking-wide">{category.title}</h3>
-                <p className="text-sm text-gray-600 tracking-wide">
+                <p className="text-xs md:text-sm text-gray-600 tracking-wide">
                   {category.desc}
                 </p>
               </div>

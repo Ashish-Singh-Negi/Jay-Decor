@@ -24,31 +24,31 @@ const MeetOurFounders = () => {
           </div>
 
           <div className="leading-relaxed flex flex-col gap-3 sm:text-center md:text-left">
-            <h3 className="w-fit tracking-wide  md:text-xl font-medium mb-2">
+            <h3 className="w-fit tracking-wide text-base  md:text-xl font-medium mb-2">
               Yatish Arekar – Founder,{" "}
               <span className="text-primary font-heading font-semibold">
                 JAY DECOR
               </span>
             </h3>
-            <p className="text-secondary text-sm sm:text-base">
+            <p className="text-secondary text-xs sm:text-base tracking-wide">
               With over <span>20 years of industry experience</span> Yatish
               Arekar founded JAY DECOR with a simple vision — to make
               high-quality interior and exterior design solutions accessible,
               reliable, and innovative.
             </p>
-            <p className="text-secondary text-sm sm:text-base tracking-wide">
+            <p className="text-secondary text-xs sm:text-base tracking-wide">
               Since 2007, his leadership and commitment to{" "}
               <span>transparency, quality, and customer satisfaction</span> have
               helped JAY DECOR build lasting relationships across residential,
               commercial, and hospitality projects.
             </p>
-            <p className="text-secondary text-sm sm:text-base tracking-wider">
+            <p className="text-secondary text-xs sm:text-base tracking-wider">
               From wallpapers and flooring to blinds, wall panels, awnings,
               artificial turf, glass films, laser cutting, 3D engraving, and
               stretch ceilings JAY DECOR continues to transform spaces through
               experience, creativity, and attention to detail.
             </p>
-            <p className="w-fit text-secondary text-sm sm:text-base tracking-wide font-medium">
+            <p className="w-fit text-secondary text-xs sm:text-base tracking-wide font-medium">
               20+ Years of Legacy. One Vision — Exceptional Spaces.
             </p>
           </div>

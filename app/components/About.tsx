@@ -14,12 +14,12 @@ const About = () => {
           </p>
         </div>
 
-        <p className="text-secondary tracking-wide text-sm sm:text-base mt-4 md:text-center max-w-2xl mx-auto">
+        <p className="text-secondary tracking-wide text-xs sm:text-base mt-4 md:text-center max-w-2xl mx-auto">
           Since 2005, JAY DECOR has been helping people and businesses create
           spaces that are not just beautiful, but thoughtfully designed,
           functional and built to last.
         </p>
-        <p className="text-secondary tracking-wide font-normal text-sm sm:text-base leading-relaxed my-4 md:text-center max-w-3xl mx-auto">
+        <p className="text-secondary tracking-wide font-normal text-xs sm:text-base leading-relaxed my-4 md:text-center max-w-3xl mx-auto">
           Founded with a vision to bring quality, creativity and reliability
           together under one roof, JAY DECOR has grown into a trusted name for
           premium interior and exterior design solutions. From imported and
