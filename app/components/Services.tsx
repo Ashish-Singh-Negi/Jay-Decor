@@ -5,7 +5,7 @@ import wallpapers_img from "@/public/custom-wallpapers-1.jpg";
 import floorings_img from "@/public/laminated-wooden-flooring.jpg";
 import carpet_tiles_img from "@/public/carpet-tile-1.jpg";
 import vinyl_flooring_img from "@/public/vinyl-flooring-1.jpg";
-import blinds_img from "@/public/wooden-venetian-blind.jpg";
+import blinds_img from "@/public/roller-blind.jpg";
 import wall_panels_img from "@/public/wall-panel-1.jpg";
 import laser_cutting_img from "@/public/laser-cutting-and-3d-engraving-1.jpg";
 import artificial_turf_img from "@/public/artifficial-turf-1.jpg";
@@ -18,6 +18,7 @@ const serviceList = [
     img: wallpapers_img,
     title: "Imported & Customised Wallpapers",
     desc: "Curated imported and made-to-order wallpapers to redefine every wall",
+    big: true,
   },
   {
     slug: "awnings",
@@ -97,26 +98,40 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-6 md:gap-x-5 md:gap-y-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-40 md:auto-rows-45 grid-flow-dense gap-4 md:gap-5">
           {serviceList.map((category) => (
             <Link
               key={category.slug}
               href={`/services/${category.slug}`}
-              className="group block break-inside-avoid mb-6 md:mb-8"
+              className={`group relative overflow-hidden rounded-xl ${
+                category.big ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
+              }`}
             >
-              <div className="relative w-full overflow-hidden rounded-xl">
-                <Image
-                  src={category.img}
-                  alt={`${category.title} — Jay Decor interior design solutions in Virar, Mumbai`}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="pt-4 leading-6">
-                <h3 className="text-lg tracking-wide">{category.title}</h3>
-                <p className="text-xs md:text-sm text-gray-600 tracking-wide">
+              <Image
+                src={category.img}
+                alt={`${category.title} — Jay Decor interior design solutions in Virar, Mumbai`}
+                fill
+                sizes={
+                  category.big
+                    ? "(max-width: 768px) 100vw, 50vw"
+                    : "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                }
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/20 to-transparent p-3 md:p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <h3 className="text-white font-medium tracking-wide text-sm md:text-base">
+                  {category.title}
+                </h3>
+                <p className="text-white/80 text-xs md:text-sm mt-1 line-clamp-2">
                   {category.desc}
                 </p>
+              </div>
+
+              <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 transition-opacity duration-300 group-hover:opacity-0">
+                <h3 className="text-white font-medium tracking-wide text-sm md:text-base drop-shadow">
+                  {category.title}
+                </h3>
               </div>
             </Link>
           ))}
