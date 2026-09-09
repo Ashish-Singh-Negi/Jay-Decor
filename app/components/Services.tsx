@@ -12,7 +12,7 @@ import artificial_turf_img from "@/public/artifficial-turf-1.jpg";
 import glass_films_img from "@/public/glass-film-1.jpg";
 import stretch_ceiling_img from "@/public/stretch-celing-1.jpg";
 
-const productList = [
+const serviceList = [
   {
     slug: "wallpapers",
     img: wallpapers_img,
@@ -81,16 +81,16 @@ const productList = [
   },
 ];
 
-const Products = () => {
+const Services = () => {
   return (
     <section
-      aria-labelledby="products-heading"
+      aria-labelledby="services-heading"
       className="w-full bg-white py-14 md:py-24"
     >
       <div className="w-[90%] md:w-3/4 mx-auto">
         <div className="text-center mb-10">
           <h2
-            id="products-heading"
+            id="services-heading"
             className=" tracking-wide text-xl sm:text-2xl md:text-3xl font-medium font-heading"
           >
             Our Services
@@ -100,11 +100,11 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-x-5 md:gap-y-8">
-          {productList.map((category) => (
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-6 md:gap-x-5 md:gap-y-8">
+          {serviceList.map((category) => (
             <Link
               key={category.slug}
-              href={`/products/${category.slug}`}
+              href={`/services/${category.slug}`}
               className="group block break-inside-avoid mb-6 md:mb-8"
             >
               <div className="relative w-full overflow-hidden rounded-xl">
@@ -129,4 +129,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Services;

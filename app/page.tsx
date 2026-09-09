@@ -2,7 +2,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Products from "./components/Products";
+import Services from "./components/Services";
 import MeetOurFounders from "./components/MeetOurFounders";
 import OurAssociates from "./components/OurAssociates";
 import SharedByOurCustomers from "./components/SharedByOurCustomers";
@@ -13,7 +13,7 @@ export default function Home() {
     <main className="h-dvh w-full">
       <Header />
       <Hero />
-      <Products />
+      <Services />
       <About />
       <OurAssociates />
       {/* <OurVisionMission /> */}
